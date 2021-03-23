@@ -1,0 +1,28 @@
+{
+  "name": "natiodb",
+  "version": "1.0.0",
+  "description": "This is a MongoDb (Mongoose) connector",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antoinefamibelle/natiodb.git"
+  },
+  "keywords": [
+    "MongoDb",
+    "Mongoose",
+    "connector"
+  ],
+  "author": "antoine.famibelle@epitech.eu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antoinefamibelle/natiodb/issues"
+  },
+  "homepage": "https://github.com/antoinefamibelle/natiodb#readme",
+  "dependencies": {
+    "mongoose": "^5.12.2",
+    "nationalogger": "^1.1.2"
+  }
+}

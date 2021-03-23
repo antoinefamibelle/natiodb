@@ -1,16 +1,18 @@
 const mongoose = require('mongoose');
+const Logger = require('nationalogger');
 
 /**
  * @function connectDatabase
  * @description This is an async function that allows you to connect to the database
  */
 
-const NatioDatabaseConnector = async () => {
+const NatioDatabaseConnector = async (url) => {
   try {
     await mongoose.connect(url, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true, useFindAndModify: false });
-    console.log('MongoDb connected ...');
+    Logger.info('Connected to database ... ')
   } catch (err) {
-    console.error(err.message);
+    Logger.error(err.message);
+    Logger.error("Exit the process with a failure ! We can't connect to the database ! ");
     //Exit the process with a failure if it cannot connect to the database
     process.exit(1);
   }
